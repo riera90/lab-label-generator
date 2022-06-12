@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>Lab Label Generator</title>
+		<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/fa/css/all.min.css">
+        <link rel="icon" href="./static/media/favicon.png" sizes="32x32" />
+        <link rel="icon" href="./static/media/favicon.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="./static/media/favicon.png"/>
+	</head>
+	<body>
+		<script src="./static/js/bootstrap.min.js"></script>
+        <section id="main-content">
+            <div class="container">
+
+                <div class="h1 mt-5">Laboratory Chemical Label Generator</div>
+
+                <div class="h1 mt-5">Information</div>
+
+                <label for="formula">Formula</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" id="formula_check" type="checkbox" checked>
+                    </div>
+                    <input type="text" id="formula" class="form-control" value="CuCl2">
+                </div>
+
+                <label for="name">Name</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" id="name_check" type="checkbox" checked>
+                    </div>
+                    <input type="text" id="name" class="form-control" value="Copper (II) Cloride">
+                </div>
+
+                <label for="properties">Properties</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" id="properties_check" type="checkbox">
+                    </div>
+                    <textarea type="text" id="properties" class="form-control"></textarea>
+                </div>               
+
+
+
+                <div class="h1 mt-5">Hazards</div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hazards_check" checked>
+                    <label class="form-check-label" for="hazards_check">Enable Hazards</label>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-6 g-4">
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="corrosive_check">Corrosive</label>
+                            <img src="./static/media/corrosive.svg" class="card-img-top" id="corrosive">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="corrosive_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="environment_check">Environment</label>
+                            <img src="./static/media/environment.svg" class="card-img-top" id="environment">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="environment_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="explosive_check">Explosive</label>
+                            <img src="./static/media/explosive.svg" class="card-img-top" id="explosive">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="explosive_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="flammable_check">Flammable</label>
+                            <img src="./static/media/flammable.svg" class="card-img-top" id="flammable">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="flammable_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="gas_check">Gas</label>
+                            <img src="./static/media/gas.svg" class="card-img-top" id="gas">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="gas_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="harmful_check">Harmful</label>
+                            <img src="./static/media/harmful.svg" class="card-img-top" id="harmful">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="harmful_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="hazard_check">Hazard</label>
+                            <img src="./static/media/hazard.svg" class="card-img-top" id="hazard">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="hazard_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="oxidizer_check">Oxidizer</label>
+                            <img src="./static/media/oxidizer.svg" class="card-img-top" id="oxidizer">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="oxidizer_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="toxic_check">Toxic</label>
+                            <img src="./static/media/toxic.svg" class="card-img-top" id="toxic">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="toxic_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="unknown_check">Unknown</label>
+                            <img src="./static/media/unknown.svg" class="card-img-top" id="unknown">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="unknown_check">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+              
+
+    
+
+                <div class="h1 mt-5">PPE</div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="ppe_check" checked>
+                    <label class="form-check-label" for="ppe_check">Enable PPE</label>
+                </div>
+
+
+                <div class="row row-cols-1 row-cols-md-6 g-4">
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="ear_check">Ear Protection</label>
+                            <img src="./static/media/ISO_7010_M003_ear.svg" class="card-img-top" id="ear">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="ear_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="eye_check">Eye Protection</label>
+                            <img src="./static/media/ISO_7010_M004_eye.svg" class="card-img-top" id="eye">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="eye_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="glove_check">Protective Gloves</label>
+                            <img src="./static/media/ISO_7010_M009_glove.svg" class="card-img-top" id="glove">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="glove_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="lab_coat_check">Protective Clothing</label>
+                            <img src="./static/media/ISO_7010_M010_lab_coat.svg" class="card-img-top" id="lab_coat">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="lab_coat_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="wash_hands_check">Wash Hands</label>
+                            <img src="./static/media/ISO_7010_M011_wash_hands.svg" class="card-img-top" id="wash_hands">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="wash_hands_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="face_shield_check">Face Shield</label>
+                            <img src="./static/media/ISO_7010_M013_face_shield.svg" class="card-img-top" id="face_shield">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="face_shield_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="mask_check">Mask</label>
+                            <img src="./static/media/ISO_7010_M016_mask.svg" class="card-img-top" id="mask">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="mask_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="oxidizer_check">respirator</label>
+                            <img src="./static/media/ISO_7010_M017_respirator.svg" class="card-img-top" id="respirator">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="respirator_check">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="cream_check">Cream Barrier</label>
+                            <img src="./static/media/ISO_7010_M022_cream.svg" class="card-img-top" id="cream">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="cream_check" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card align-items-center col-sm-8">
+                            <label class="form-check-label" for="static_check">Anti-static</label>
+                            <img src="./static/media/ISO_7010_M032_static.svg" class="card-img-top" id="static">
+                            <div class="card-body">
+                                <input class="form-check-input" type="checkbox" id="static_check">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="h1 mt-5">NFPA704</div>
+                <img src="./static/media/NFPA_704.svg.png" width="100px" id="nfpa">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="NFPA704_check" checked>
+                    <label class="form-check-label" for="NFPA704_check">Enable NFPA704</label>
+                </div>
+                
+
+                <label class="form-check-label" for="NFPA_health">Health Hazard Level</label>
+                <select class="form-select" id="NFPA_health">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option selected value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label class="form-check-label" for="NFPA_flammability">Flammability Hazard Level</label>
+                <select class="form-select" id="NFPA_flammability">
+                    <option selected value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label class="form-check-label" for="NFPA_instability">Instability Hazard Level</label>
+                <select class="form-select" id="NFPA_instability">
+                    <option value="0">0</option>
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label class="form-check-label" for="NFPA_special">Special Hazard</label>
+                <select class="form-select" id="NFPA_special">
+                    <option selected value="None">None</option>
+                    <option value="OX">OX - Oxidizer</option>
+                    <option value="SA">SA - Asphyxiant</option>
+                    <option value="W">W - No Water</option>
+                    <option value="ACID">ACID - Acid</option>
+                    <option value="ALK">ALK - Alkaline</option>
+                    <option value="COR">COR - Corrosive</option>
+                    <option value="COR+OX">COR+OX - Corrosive Oxidizer</option>
+                    <option value="COR+OXY">COR+OXY - Corrosive Oxidizer</option>
+                    <option value="CRY">CRY - Cryogenic</option>
+                    <option value="OXY">OXY - Oxidizer Agent</option>
+                    <option value="W+OX">W+OX - No Water Oxidizer</option>
+                    <option value="RAD">RAD - Radioactive</option>
+                </select>
+                <div class="table-responsive mt-4">
+                    <table class="table" border="0" cellspacing="1" cellpadding="6">
+                        <tbody>
+                            <tr>
+                                <td colspan="3" align="left ">
+                                <div align="center "><strong> Rating Explanation Guide </strong></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary" align="center" width="30%"><strong> HEALTH HAZARD</strong></td>
+                                <td class="table-danger"  align="center" width="31%"><strong> FLAMMABILITY HAZARD</strong></td>
+                                <td class="table-warning" align="center" width="30%"><strong> INSTABILITY HAZARD</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary" align="left" width="30%">4 = Can be lethal</td>
+                                <td class="table-danger"  align="left" width="31%">4 = Below 23 Degrees C</td>
+                                <td class="table-warning" align="left" width="30%">4 = May explode at normal temperatures and pressures</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary" align="left" width="30%">3 = Can cause serious or permanent injury</td>
+                                <td class="table-danger"  align="left" width="31%">3 = Above 23 Degrees C</td>
+                                <td class="table-warning" align="left" width="30%">3 = May explode at high temperature or shock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary" align="left" width="30%">2 = Can cause temporary incapacitation or residual injury</td>
+                                <td class="table-danger"  align="left" width="31%">2 = Above 38 Degrees C</td>
+                                <td class="table-warning" align="left" width="30%">2 = Violent chemical change at high temperatures or pressures</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary" align="left" width="30%">1 = Can cause significant irritation</td>
+                                <td class="table-danger"  align="left" width="31%">1 = Above 94 Degrees C</td>
+                                <td class="table-warning" align="left" width="30%">1 = Normally stable.&nbsp; High temperatures make unstable</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary" align="left" width="30%">0 = No hazard</td>
+                                <td class="table-danger"  align="left" width="31%">0 = Will not burn</td>
+                                <td class="table-warning" align="left" width="30%">0 = Stable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <button type="button" onclick="generate(0,0, 1)  " class="btn btn-primary m-1">Generate Small</button>
+                    <button type="button" onclick="generate(0,0, 1.5)" class="btn btn-primary m-1">Generate Normal</button>
+                    <button type="button" onclick="generate(0,0, 2)  " class="btn btn-primary m-1">Generate Large</button>
+                    <button type="button" onclick="generate(0,0, 4)  " class="btn btn-primary m-1">Generate Extra Large</button>
+                </div>
+                <div class="m-5">
+                    <canvas class="border" id="canvas" width="500" height="250"></canvas>
+                </div>
+
+                <div class="m-5">
+                    <p>This is an open source project. The source code can be found <a href="https://github.com/riera90/lab-label-generator">here</a>.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        
+
+        <script>
+            function generate(w,h,s){
+                var c = document.getElementById("canvas");
+                let needs_resize = false;
+                if (w == 0 && h == 0) {
+                    needs_resize = true;
+                    w = 500*s;
+                    h = 250*s;
+                }
+                c.setAttribute("width", w);
+                c.setAttribute("height", h);
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = '#FFFFFF';
+                ctx.clearRect(0,0,w,h);
+                ctx.beginPath();
+                ctx.rect(5, 5, (w)-10, (h)-10);
+                ctx.stroke();
+                let x = 0;
+                let y = 20*s;
+                ctx.fillStyle = '#000000';
+                let letter_with = 6*s;
+                ctx.font = "bold "+10*s+"px Arial";
+                if (document.getElementById('formula_check').checked == true) {
+                    ctx.fillText(document.getElementById("formula").value, 10*s, y);
+                    if (document.getElementById("formula").value.length*letter_with > x)
+                        x = document.getElementById("formula").value.length*letter_with;
+                    y+=(15*s);
+                }
+                ctx.font = ""+10*s+"px Arial";
+                if (document.getElementById('name_check').checked == true) {
+                    ctx.fillText(document.getElementById("name").value, 10*s, y);
+                    if (document.getElementById("name").value.length*letter_with > x)
+                        x = document.getElementById("name").value.length*letter_with;
+                    y+=(15*s);
+                }
+                if (document.getElementById('properties_check').checked == true) {
+                    var lines = document.getElementById("properties").value.split('\n');
+                    for (var i = 0; i < lines.length; i++) {
+                        ctx.fillText(lines[i], 10*s, y);
+                        if (lines[i].length*letter_with > x)
+                            x = lines[i].length*letter_with;
+                        y+=(15*s);
+                    }
+                }
+                if (120*s > x)
+                    x = 120*s;
+                if (document.getElementById('NFPA704_check').checked == true) {
+                    if (y < 75*s)
+                        y = 75*s;
+                    ctx.drawImage(document.getElementById("nfpa"), (x-100*s)/2, y, 100*s, 100*s);
+                    ctx.font = "bold "+30*s+"px Arial";
+                    ctx.fillText(document.getElementById("NFPA_health").value,((x-(100*s))/2)+(17*s), y+(60*s));
+                    ctx.fillText(document.getElementById("NFPA_flammability").value,((x-(100*s))/2)+(42*s), y+(35*s));
+                    ctx.fillText(document.getElementById("NFPA_instability").value,((x-(100*s))/2)+(66*s), y+(60*s));
+                    if (document.getElementById("NFPA_special").value != "None"){
+                        if (document.getElementById("NFPA_special").value.length == 1){
+                            ctx.font = "bold "+20*s+"px Arial";
+                            ctx.fillText(document.getElementById("NFPA_special").value,((x-(100*s))/2)+(41*s)-0, y+(83*s));
+                        }else if (document.getElementById("NFPA_special").value.length == 2){
+                            ctx.font = "bold "+18*s+"px Arial";
+                            ctx.fillText(document.getElementById("NFPA_special").value,((x-(100*s))/2)+(37*s)-0, y+(81*s));
+                        }else if (document.getElementById("NFPA_special").value.length == 3){
+                            ctx.font = "bold "+15*s+"px Arial";
+                            ctx.fillText(document.getElementById("NFPA_special").value,((x-(100*s))/2)+(34*s)-0, y+(79*s));
+                        }else if (document.getElementById("NFPA_special").value.length == 4){
+                            ctx.font = "bold "+10*s+"px Arial";
+                            ctx.fillText(document.getElementById("NFPA_special").value,((x-(100*s))/2)+(36*s)-0, y+(78*s));
+                        }else if (document.getElementById("NFPA_special").value.length == 6){
+                            ctx.font = "bold "+9*s+"px Arial";
+                            ctx.fillText(document.getElementById("NFPA_special").value,((x-(100*s))/2)+(30*s)-0, y+(78*s));
+                        }else if (document.getElementById("NFPA_special").value.length == 7){
+                            ctx.font = "bold "+8*s+"px Arial";
+                            ctx.fillText(document.getElementById("NFPA_special").value,((x-(100*s))/2)+(30*s)-0, y+(77*s));
+                        }
+                    }
+                    y+=(100*s);
+                }
+                let y2 = 10;
+                if (document.getElementById('hazards_check').checked == true) {
+                    if (y < 180)
+                        y = 180;
+                    let warnings = ['corrosive', 'environment', 'explosive', 'flammable', 'gas', 'harmful', 'hazard', 'oxidizer', 'toxic', 'unknown'];
+                    for (var i = 0; i < warnings.length; i++) {
+                        if (document.getElementById(warnings[i]+'_check').checked == true){
+                            ctx.drawImage(document.getElementById(warnings[i]), x, y2, 50*s, 50*s);
+                            y2+=60*s;if (y2 >= y) {x+=60*s; y2=10;}
+                        }
+                    }
+                }
+                if (document.getElementById('ppe_check').checked == true) {
+                    if (y < 180*s)
+                        y = (180*s);
+                    if (y2 != 10) {
+                        x+=(60*s);
+                        y2=10;
+                    }
+                    let ppe = ['ear', 'eye', 'glove', 'lab_coat', 'wash_hands', 'face_shield', 'mask', 'respirator', 'cream', 'static'];
+                    for (var i = 0; i < ppe.length; i++) {
+                        if (document.getElementById(ppe[i]+'_check').checked == true){
+                            ctx.drawImage(document.getElementById(ppe[i]), x, y2, 50*s, 50*s);
+                            y2+=60*s;if (y2 >= y) {x+=60*s; y2=10;}
+                        }
+                    }
+                    x+=(60*s);
+                }
+                if (needs_resize)
+                    generate(x,y+10,s);
+            }
+            function sleep(milliseconds) {
+                var start = new Date().getTime();
+                for (var i = 0; i < 1e7; i++)
+                    if ((new Date().getTime() - start) > milliseconds)
+                        break;
+            }
+        </script>
+	</body>
+</html>
