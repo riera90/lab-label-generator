@@ -488,6 +488,9 @@
                         }
                     }
                     x+=(60*s);
+                    if (y2 == 10) {
+                        x-=(60*s);
+                    }
                 }
                 if (needs_resize)
                     generate(x,y+10,s);
