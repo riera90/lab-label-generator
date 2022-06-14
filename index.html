@@ -364,12 +364,19 @@
                     </table>
                 </div>
 
+                <div class="h1 mt-5">Label generation</div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hazards_and_ppe_one_block_check">
+                    <label class="form-check-label" for="hazards_and_ppe_one_block_check">Print Hazards and PPE as one block.</label>
+                </div>
                 <div>
                     <button type="button" onclick="generate(0,0, 1)  " class="btn btn-primary m-1">Generate Small</button>
                     <button type="button" onclick="generate(0,0, 1.5)" class="btn btn-primary m-1">Generate Normal</button>
                     <button type="button" onclick="generate(0,0, 2)  " class="btn btn-primary m-1">Generate Large</button>
                     <button type="button" onclick="generate(0,0, 4)  " class="btn btn-primary m-1">Generate Extra Large</button>
-                </div>
+                </div>                
+                
+
                 <div class="m-5">
                     <canvas class="border" id="canvas" width="500" height="250"></canvas>
                 </div>
@@ -474,11 +481,13 @@
                     }
                 }
                 if (document.getElementById('ppe_check').checked == true) {
-                    if (y < 180*s)
-                        y = (180*s);
-                    if (y2 != 10) {
-                        x+=(60*s);
-                        y2=10;
+                    if (document.getElementById('hazards_and_ppe_one_block_check').checked == false) {
+                        if (y < 180*s)
+                            y = (180*s);
+                        if (y2 != 10) {
+                            x+=(60*s);
+                            y2=10;
+                        }
                     }
                     let ppe = ['ear', 'eye', 'glove', 'lab_coat', 'wash_hands', 'face_shield', 'mask', 'respirator', 'cream', 'static'];
                     for (var i = 0; i < ppe.length; i++) {
